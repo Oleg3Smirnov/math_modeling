@@ -1,34 +1,29 @@
-[ 22 июля 2023 г. 15:05 ] ⁨Олег⁩: import time
+[ 22 июля 2023 г. 2:33 ] ⁨Олег⁩: import random 
 
-def is_devide_by_three(a):
-    return (a%3 == 0) 
-
-nums = [24, 28, 19, 179]
-timer_1 = time.time()
-result = list(map(is_devide_by_three, nums)) 
-timer_2 = time.time()
-
-	
-symbols = 'Python'
-timer_3 = time.time()
-symbol_codes = [ord(symbol) for symbol in symbols]
-timer_4 = time.time()
-
+n = random.randint(2, 50)
+x = random.randint(1, n*8//10)
 a = []
-timer_5 = time.time()
-for i in range(0, 5000, 1):
-    b = 2*i**4 - 5*i**3 - i**2 + 8*i -10
+
+print(f'n = {n}')
+print(f'Количество элементов в списке: {x}')
+print('Числа в списке могут повторяться')
+for i in range(0, x, 1):
+    b = random.randint(1, 100)
     a.append(b)
-timer_6 = time.time()
+print(f'Список: {a}')
 
-print(f'Map: {- timer_1 + timer_2}')
-print(f'Списковое включение: {- timer_3 + timer_4}')
-print(f'Цикл: {- timer_5 + timer_6}')
+c = random.randint(1, n-1)
 
-c = [- timer_1 + timer_2, - timer_3 + timer_4, - timer_5 + timer_6]
-if min(c) == - timer_1 + timer_2:
-    print('Map - самый быстрый')
-elif min(c) == - timer_3 + timer_4:
-    print('Списковое включение - самое быстрое')
-else:
-    print('Цикл - самый быстрый')
+h = 0
+while h < 1:
+    e = 1
+    f = 1
+    for i in range(0, x, 1):
+        if c == a[i]:
+            e += 1
+    if e == f:
+        h += 1
+    else:
+        c = random.randint(1, n-1)
+
+print(f'Рандомное число: {x}')
