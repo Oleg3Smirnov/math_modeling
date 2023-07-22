@@ -1,4 +1,4 @@
-[ 22 июля 2023 г. 0:52 ] ⁨Олег⁩: name = 'Smirnov Oleg'
+name = 'Smirnov Oleg'
 a = []
 b = ''
 c = ''
