@@ -1,41 +1,30 @@
+import numpy as np
+
+i = 0
+j = 0
 name = 'Smirnov Oleg'
-a = []
-b = ''
-c = ''
-d = []
-e = ''
-h = 0
-t = 0
+
+name = '_'.join(name)
+print(name)
+name = name.upper()
+print(name)
+
+massive_1 = np.zeros((1, len(name)))
+
 for symbol in name:
-    b += symbol + '_'
-print(b)
+    massive_1[0, i] = ord(symbol)
+    i += 1
+print(massive_1)
 
-for symbol in b:
-    if symbol == 95:
-        c = c
-    elif ord(symbol) > 64 and ord(symbol) < 97 or ord(symbol) == 32:
-        c += symbol
-    else:
-        c += chr(ord(symbol) - 32)
-    a.append(ord(c[h]))
-    h += 1
+name = name.lower()
+print(name)
 
-print(a)
+massive_2 = np.zeros((1, len(name)))
 
-for symbol in b:
-    if symbol == 95:
-        e = e
-    elif ord(symbol) > 97 or ord(symbol) == 32:
-        e += symbol
-    else:
-        e += chr(ord(symbol) + 32)
-    d.append(ord(e[t]))
-    t += 1
+for symbol in name:
+    massive_2[0, j] = ord(symbol)
+    j += 1
+print(massive_2)
 
-print(d)
-
-print(f'Максимальное значение из списка с верхним регистром: {max(a)}')
-print(f'Максимальное значение из списка с нижним регистром: {max(d)}')
-
-#print(f'Максимальное значение из списка с верхним регистром: {ord(max(c))}')
-#print(f'Максимальное значение из списка с нижним регистром: {ord(max(e))}')
+print(f'Максимальное значение из списка с верхним регистром: {max(massive_1[0])}')
+print(f'Максимальное значение из списка с нижним регистром: {max(massive_2[0])}')
